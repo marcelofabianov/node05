@@ -12,8 +12,15 @@ app.use(bodyParser.json())
 app.engine('handlebars', hbs())
 app.set('view engine', 'handlebars')
 
+// Models
+const User = require('./models/User')
+
 // Rotas
 app.get('/', (req, res) => res.render('index'))
-app.post('/add', (req, res) => res.send(req.body))
+app.post('/add', (req, res) =>
+    User.create(req.body)
+        .then(() => res.send('Success!'))
+        .catch(() => res.send('Error!'))
+)
 
 app.listen(3002)
