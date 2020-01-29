@@ -1,8 +1,6 @@
 const express = require('express')
 const hbs = require('express-handlebars')
 const bodyParser = require('body-parser')
-//const Sequelize = require('sequelize')
-//const sequelize = new Sequelize('mysql://user:secret@localhost:3306/express')
 
 const app = express()
 
