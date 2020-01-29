@@ -16,8 +16,8 @@ app.set('view engine', 'handlebars')
 const User = require('./models/User')
 
 // Rotas
-app.get('/', (req, res) => res.render('index'))
-app.post('/add', (req, res) =>
+app.get('/user', (req, res) => res.render('index'))
+app.post('/user', (req, res) =>
     User.create(req.body)
         .then(() => res.send('Success!'))
         .catch(() => res.send('Error!'))
