@@ -16,10 +16,11 @@ app.set('view engine', 'handlebars')
 const User = require('./models/User')
 
 // Rotas
-app.get('/user', (req, res) => res.render('index'))
-app.post('/user', (req, res) =>
+app.get('/', (req, res) => res.send('Home'))
+app.get('/users', (req, res) => res.render('index'))
+app.post('/users', (req, res) =>
     User.create(req.body)
-        .then(() => res.send('Success!'))
+        .then(() => res.redirect('/users'))
         .catch(() => res.send('Error!'))
 )
 

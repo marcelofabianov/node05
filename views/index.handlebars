@@ -1,12 +1,12 @@
 <div class="row">
     <div class="col">
-        <h1>Cadastro de usuário</h1>
+        <h4>Cadastro de usuário</h4>
     </div>
 </div>
-<hr>
+<br>
 <div class="row">
     <div class="col">
-        <form action="/user" method="POST">
+        <form action="/users" method="POST">
             <div class="form-group">
                 <label for="name">Name</label>
                 <input type="text" class="form-control" id="name" name="name">
@@ -21,5 +21,25 @@
             </div>
             <button type="submit" class="btn btn-primary">Salvar</button>
         </form>
+    </div>
+    <div class="col">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nome</th>
+                    <th>E-mail</th>
+                    <th>Ações</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>...</td>
+                    <td>...</td>
+                    <td>...</td>
+                    <td>...</td>
+                </tr>
+            </tbody>
+        </table>
     </div>
 </div>
