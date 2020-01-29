@@ -17,7 +17,14 @@ const User = require('./models/User')
 
 // Rotas
 app.get('/', (req, res) => res.send('Home'))
-app.get('/users', (req, res) => res.render('index'))
+
+// Rota: Users / Index
+app.get('/users', (req, res) => res.render('users/index'))
+
+// Rota: Users / Create
+app.get('/users/create', (req, res) => res.render('users/create'))
+
+// Rota: Users / Store
 app.post('/users', (req, res) =>
     User.create(req.body)
         .then(() => res.redirect('/users'))
